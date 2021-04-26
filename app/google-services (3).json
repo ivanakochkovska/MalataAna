@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "842866016611",
+    "project_id": "malataana-b78dd",
+    "storage_bucket": "malataana-b78dd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:842866016611:android:7dc0f783273a868f915356",
+        "android_client_info": {
+          "package_name": "com.example.malataana"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "842866016611-ko71dkocclq0bp98t7befet33d4ei8p1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHwGNmgZYt9KCGU4YI-hZ8qu51aQIWUF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "842866016611-ko71dkocclq0bp98t7befet33d4ei8p1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
