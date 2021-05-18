@@ -1,13 +1,16 @@
 package com.example.malataana;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
+
 
 public class FirstFragment extends Fragment {
 
@@ -16,13 +19,26 @@ public class FirstFragment extends Fragment {
             LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState
     ) {
+
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_first, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        ImageView fearFirstImage=(ImageView) view.findViewById(R.id.fear_1);
+        fearFirstImage.setImageResource(R.drawable.images);//set the source in java class
+        ImageView fearSecondImage = (ImageView) view.findViewById(R.id.fear_2);
+        fearSecondImage.setImageResource(R.drawable.fear_2);//set the source in java class
+        ImageView sound = (ImageView) view.findViewById(R.id.sound_happiness);
+        sound.setImageResource(R.drawable.sound);//set the source in java class
+        final MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.stravv);
+        sound.setOnClickListener(new View.OnClickListener(){
 
+            public void onClick(View v) {
+                mp.start();
+            }
+        });
         view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,5 +46,7 @@ public class FirstFragment extends Fragment {
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
         });
+
     }
+
 }
