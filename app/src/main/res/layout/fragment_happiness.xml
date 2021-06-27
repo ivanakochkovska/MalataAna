@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_background"
+    tools:context=".HappinessFragment" >
+
+    <ImageView
+        android:id="@+id/sound_happiness"
+        android:layout_width="353dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/sound_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/happiness_ana"
+        android:layout_width="327dp"
+        android:layout_height="186dp"
+        android:layout_marginBottom="12dp"
+        android:src="@drawable/happiness_ana_border"
+        app:layout_constraintBottom_toTopOf="@+id/happiness_boy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.345"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/happiness_boy"
+        android:layout_width="317dp"
+        android:layout_height="193dp"
+        android:layout_marginBottom="48dp"
+        android:src="@drawable/happiness_boy"
+        app:layout_constraintBottom_toTopOf="@+id/happiness_home"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.414"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/happiness_home"
+        android:layout_width="232dp"
+        android:layout_height="86dp"
+        android:layout_marginEnd="224dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

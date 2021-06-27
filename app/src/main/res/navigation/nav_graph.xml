@@ -3,26 +3,60 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/mainMenuFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.malataana.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/mainMenuFragment"
+        android:name="com.example.malataana.MainMenuFragment"
+        android:label="fragment_main_menu"
+        tools:layout="@layout/fragment_main_menu" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_mainMenuFragment_to_menuChooseEmotionFragment"
+            app:destination="@id/menuChooseEmotionFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.malataana.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/menuChooseEmotionFragment"
+        android:name="com.example.malataana.MenuChooseEmotionFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_menuChooseEmotionFragment_to_mainMenuFragment2"
+            app:destination="@id/mainMenuFragment" />
+        <action
+            android:id="@+id/action_menuChooseEmotionFragment_to_firstFragment"
+            app:destination="@id/firstFragment" />
+        <action
+            android:id="@+id/action_menuChooseEmotionFragment_to_secondFragment"
+            app:destination="@id/secondFragment" />
+        <action
+            android:id="@+id/action_menuChooseEmotionFragment_to_happinessFragment"
+            app:destination="@id/happinessFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/firstFragment"
+        android:name="com.example.malataana.FirstFragment"
+        android:label="fragment_first"
+        tools:layout="@layout/fragment_first" >
+        <action
+            android:id="@+id/action_firstFragment_to_menuChooseEmotionFragment"
+            app:destination="@id/menuChooseEmotionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondFragment"
+        android:name="com.example.malataana.SecondFragment"
+        android:label="fragment_second"
+        tools:layout="@layout/fragment_second" >
+        <action
+            android:id="@+id/action_secondFragment_to_menuChooseEmotionFragment"
+            app:destination="@id/menuChooseEmotionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/happinessFragment"
+        android:name="com.example.malataana.HappinessFragment"
+        android:label="fragment_happiness"
+        tools:layout="@layout/fragment_happiness" >
+        <action
+            android:id="@+id/action_happinessFragment_to_menuChooseEmotionFragment"
+            app:destination="@id/menuChooseEmotionFragment" />
     </fragment>
 </navigation>

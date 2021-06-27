@@ -24,23 +24,34 @@ public class SecondFragment extends Fragment {
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        ImageView embrFirstImage=(ImageView) view.findViewById(R.id.embr_1);
-        embrFirstImage.setImageResource(R.drawable.embr_1);//set the source in java class
-        ImageView sound = (ImageView) view.findViewById(R.id.sound_embr);
-        sound.setImageResource(R.drawable.sound);//set the source in java class
-        final MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.sramezlivost);
+        ImageView sadnessFirstImage=(ImageView) view.findViewById(R.id.sadness_1);
+        sadnessFirstImage.setImageResource(R.drawable.taga_ana);//set the source in java class
+        ImageView sadnessSecondImage=(ImageView) view.findViewById(R.id.sadness_2);
+        sadnessSecondImage.setImageResource(R.drawable.sadness_boy);//set the source in java class
+        ImageView sound = (ImageView) view.findViewById(R.id.sound_sadness);
+        sound.setImageResource(R.drawable.listen_fear_final);//set the source in java class
+        final MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.taga);
         sound.setOnClickListener(new View.OnClickListener(){
 
             public void onClick(View v) {
                 mp.start();
             }
         });
-        view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
+        ImageView home = (ImageView) view.findViewById(R.id.home_sadness);
+        home.setImageResource(R.drawable.home);
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 NavHostFragment.findNavController(SecondFragment.this)
-                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
+                        .navigate(R.id.action_secondFragment_to_menuChooseEmotionFragment);
             }
         });
+//        view.findViewById(R.id.button_second).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                NavHostFragment.findNavController(SecondFragment.this)
+//                        .navigate(R.id.action_SecondFragment_to_FirstFragment);
+//            }
+//        });
     }
 }

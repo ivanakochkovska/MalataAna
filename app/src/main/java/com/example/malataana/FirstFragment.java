@@ -27,11 +27,20 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         ImageView fearFirstImage=(ImageView) view.findViewById(R.id.fear_1);
-        fearFirstImage.setImageResource(R.drawable.images);//set the source in java class
+        fearFirstImage.setImageResource(R.drawable.fear_ana);//set the source in java class
         ImageView fearSecondImage = (ImageView) view.findViewById(R.id.fear_2);
-        fearSecondImage.setImageResource(R.drawable.fear_2);//set the source in java class
-        ImageView sound = (ImageView) view.findViewById(R.id.sound_happiness);
-        sound.setImageResource(R.drawable.sound);//set the source in java class
+        fearSecondImage.setImageResource(R.drawable.fear_boy);//set the source in java class
+        ImageView sound = (ImageView) view.findViewById(R.id.sound_fear);
+        sound.setImageResource(R.drawable.listen_fear_final);//set the source in java class
+        ImageView home = (ImageView) view.findViewById(R.id.home_id);
+        home.setImageResource(R.drawable.home);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(FirstFragment.this)
+                       .navigate(R.id.action_firstFragment_to_menuChooseEmotionFragment);
+            }
+        });
         final MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.stravv);
         sound.setOnClickListener(new View.OnClickListener(){
 
@@ -39,13 +48,13 @@ public class FirstFragment extends Fragment {
                 mp.start();
             }
         });
-        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
-            }
-        });
+//        view.findViewById(R.id.button_first).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                NavHostFragment.findNavController(FirstFragment.this)
+//                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+//            }
+//        });
 
     }
 
