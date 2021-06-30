@@ -31,7 +31,7 @@ public class FirstFragment extends Fragment {
         ImageView fearSecondImage = (ImageView) view.findViewById(R.id.fear_2);
         fearSecondImage.setImageResource(R.drawable.fear_boy);//set the source in java class
         ImageView sound = (ImageView) view.findViewById(R.id.sound_fear);
-        sound.setImageResource(R.drawable.listen_fear_final);//set the source in java class
+        sound.setImageResource(R.drawable.sound_frame);//set the source in java class
         ImageView home = (ImageView) view.findViewById(R.id.home_id);
         home.setImageResource(R.drawable.home);
         home.setOnClickListener(new View.OnClickListener() {

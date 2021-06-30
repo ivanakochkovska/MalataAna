@@ -4,78 +4,82 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_background"
     tools:context=".MenuChooseEmotionFragment">
 
     <ImageView
         android:id="@+id/menu_fear"
-        android:layout_width="181dp"
-        android:layout_height="143dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="189dp"
+        android:layout_height="179dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginEnd="2dp"
         android:src="@drawable/fear_ana"
-        app:layout_constraintBottom_toTopOf="@+id/menu_happiness"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/menu_sadness"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/menu_sadness"
-        android:layout_width="184dp"
-        android:layout_height="135dp"
-        android:layout_marginTop="164dp"
+        android:layout_width="189dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
         android:src="@drawable/taga_ana"
-        app:layout_constraintBottom_toTopOf="@+id/menu_anger"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toEndOf="@+id/menu_fear"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
-        android:id="@+id/menu_anger"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="56dp"
-        android:src="@drawable/anger"
-        app:layout_constraintBottom_toTopOf="@+id/menu_home"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <ImageView
-        android:id="@+id/menu_happiness"
-        android:layout_width="233dp"
-        android:layout_height="160dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/happiness_ana"
-        app:layout_constraintBottom_toTopOf="@+id/menu_love"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/menu_love"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="32dp"
-        android:src="@drawable/love_ana"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="155dp"
-        android:layout_height="130dp"
+        android:id="@+id/imageView"
+        android:layout_width="298dp"
+        android:layout_height="111dp"
         android:layout_marginTop="16dp"
-        android:src="@drawable/listen_fear_final"
+        android:src="@drawable/sound_frame"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
+        android:id="@+id/menu_happiness"
+        android:layout_width="189dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/happiness_ana_border"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_fear" />
+
+    <ImageView
+        android:id="@+id/menu_anger"
+        android:layout_width="189dp"
+        android:layout_height="179dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="6dp"
+        android:src="@drawable/anger"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_sadness" />
+
+    <ImageView
+        android:id="@+id/menu_love"
+        android:layout_width="189dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="2dp"
+        android:src="@drawable/love_ana"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_happiness" />
+
+    <ImageView
         android:id="@+id/menu_home"
-        android:layout_width="145dp"
-        android:layout_height="148dp"
+        android:layout_width="174dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="36dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="24dp"
         android:src="@drawable/home"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/menu_anger" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

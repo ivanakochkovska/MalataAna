@@ -29,7 +29,7 @@ public class SecondFragment extends Fragment {
         ImageView sadnessSecondImage=(ImageView) view.findViewById(R.id.sadness_2);
         sadnessSecondImage.setImageResource(R.drawable.sadness_boy);//set the source in java class
         ImageView sound = (ImageView) view.findViewById(R.id.sound_sadness);
-        sound.setImageResource(R.drawable.listen_fear_final);//set the source in java class
+        sound.setImageResource(R.drawable.sound_frame);//set the source in java class
         final MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.taga);
         sound.setOnClickListener(new View.OnClickListener(){
 

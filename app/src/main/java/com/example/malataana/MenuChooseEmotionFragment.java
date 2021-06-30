@@ -45,7 +45,7 @@ public class MenuChooseEmotionFragment extends Fragment {
             }
         });
         ImageView happiness = (ImageView) view.findViewById(R.id.menu_happiness);
-        happiness.setImageResource(R.drawable.happiness_ana);//set the source in java class
+        happiness.setImageResource(R.drawable.happiness_ana_border);//set the source in java class
         happiness.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,8 +55,22 @@ public class MenuChooseEmotionFragment extends Fragment {
         });
         ImageView love = (ImageView) view.findViewById(R.id.menu_love);
         love.setImageResource(R.drawable.love_ana);//set the source in java class
+        love.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(MenuChooseEmotionFragment.this)
+                        .navigate(R.id.action_menuChooseEmotionFragment_to_loveFragment);
+            }
+        });
         ImageView anger = (ImageView) view.findViewById(R.id.menu_anger);
-        anger.setImageResource(R.drawable.happiness_ana);//set the source in java class
+        anger.setImageResource(R.drawable.anger);//set the source in java class
+        anger.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(MenuChooseEmotionFragment.this)
+                        .navigate(R.id.action_menuChooseEmotionFragment_to_angerFragment);
+            }
+        });
         ImageView home = (ImageView) view.findViewById(R.id.menu_home);
         home.setImageResource(R.drawable.home);//set the source in java class
         ImageView sound = (ImageView) view.findViewById(R.id.sound_fear);

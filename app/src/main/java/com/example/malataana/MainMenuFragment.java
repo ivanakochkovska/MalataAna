@@ -44,6 +44,13 @@ public class MainMenuFragment extends Fragment {
 
         ImageView quizImage = (ImageView) view.findViewById(R.id.border_3);
         quizImage.setImageResource(R.drawable.quiz);//set the source in java class
+        quizImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                NavHostFragment.findNavController(MainMenuFragment.this)
+                        .navigate(R.id.action_mainMenuFragment_to_fearQuizFragment);
+            }
+        });
         final MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.stravv);
 //        sound.setOnClickListener(new View.OnClickListener(){
 //

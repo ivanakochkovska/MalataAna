@@ -4,34 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_background"
     tools:context=".SecondFragment">
-
-    <Button
-        android:id="@+id/button_second"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/previous"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.881"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/sound_sadness"
-        android:layout_width="159dp"
-        android:layout_height="156dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/listen_fear_final"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/sadness_1"
-        android:layout_width="178dp"
-        android:layout_height="174dp"
-        android:layout_marginTop="48dp"
+        android:layout_width="327dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/taga_ana"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -40,9 +20,9 @@
 
     <ImageView
         android:id="@+id/sadness_2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_width="327dp"
+        android:layout_height="186dp"
+        android:layout_marginTop="20dp"
         android:src="@drawable/sadness_boy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -51,12 +31,22 @@
 
     <ImageView
         android:id="@+id/home_sadness"
-        android:layout_width="96dp"
-        android:layout_height="67dp"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="125dp"
+        android:layout_height="105dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="4dp"
         android:src="@drawable/home"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/sound_sadness"
+        android:layout_width="353dp"
+        android:layout_height="157dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/sound_frame"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
