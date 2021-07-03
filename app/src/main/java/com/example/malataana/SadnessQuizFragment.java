@@ -89,8 +89,19 @@ public class SadnessQuizFragment extends Fragment {
         arrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                mp.stop();
                 NavHostFragment.findNavController(SadnessQuizFragment.this)
-                        .navigate(R.id.action_fearQuizFragment_to_mainMenuFragment);
+                        .navigate(R.id.action_sadnessQuizFragment_to_happinessQuizFragment);
+            }
+        });
+        ImageView arrowBack = (ImageView) view.findViewById(R.id.back_id);
+        arrowBack.setImageResource(R.drawable.back);//set the source in java class
+        arrowBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mp.stop();
+                NavHostFragment.findNavController(SadnessQuizFragment.this)
+                        .navigate(R.id.action_sadnessQuizFragment_to_fearQuizFragment);
             }
         });
     }

@@ -9,7 +9,7 @@
         android:id="@+id/mainMenuFragment"
         android:name="com.example.malataana.MainMenuFragment"
         android:label="fragment_main_menu"
-        tools:layout="@layout/fragment_main_menu" >
+        tools:layout="@layout/fragment_main_menu">
         <action
             android:id="@+id/action_mainMenuFragment_to_menuChooseEmotionFragment"
             app:destination="@id/menuChooseEmotionFragment" />
@@ -21,7 +21,7 @@
         android:id="@+id/menuChooseEmotionFragment"
         android:name="com.example.malataana.MenuChooseEmotionFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" >
+        tools:layout="@layout/fragment_menu">
         <action
             android:id="@+id/action_menuChooseEmotionFragment_to_mainMenuFragment2"
             app:destination="@id/mainMenuFragment" />
@@ -45,7 +45,7 @@
         android:id="@+id/firstFragment"
         android:name="com.example.malataana.FirstFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
+        tools:layout="@layout/fragment_first">
         <action
             android:id="@+id/action_firstFragment_to_menuChooseEmotionFragment"
             app:destination="@id/menuChooseEmotionFragment" />
@@ -54,7 +54,7 @@
         android:id="@+id/secondFragment"
         android:name="com.example.malataana.SecondFragment"
         android:label="fragment_second"
-        tools:layout="@layout/fragment_second" >
+        tools:layout="@layout/fragment_second">
         <action
             android:id="@+id/action_secondFragment_to_menuChooseEmotionFragment"
             app:destination="@id/menuChooseEmotionFragment" />
@@ -63,7 +63,7 @@
         android:id="@+id/happinessFragment"
         android:name="com.example.malataana.HappinessFragment"
         android:label="fragment_happiness"
-        tools:layout="@layout/fragment_happiness" >
+        tools:layout="@layout/fragment_happiness">
         <action
             android:id="@+id/action_happinessFragment_to_menuChooseEmotionFragment"
             app:destination="@id/menuChooseEmotionFragment" />
@@ -72,7 +72,7 @@
         android:id="@+id/angerFragment"
         android:name="com.example.malataana.AngerFragment"
         android:label="fragment_anger"
-        tools:layout="@layout/fragment_anger" >
+        tools:layout="@layout/fragment_anger">
         <action
             android:id="@+id/action_angerFragment_to_menuChooseEmotionFragment"
             app:destination="@id/menuChooseEmotionFragment" />
@@ -80,7 +80,7 @@
     <fragment
         android:id="@+id/loveFragment"
         android:name="com.example.malataana.LoveFragment"
-        android:label="LoveFragment" >
+        android:label="LoveFragment">
         <action
             android:id="@+id/action_loveFragment_to_menuChooseEmotionFragment"
             app:destination="@id/menuChooseEmotionFragment" />
@@ -89,7 +89,7 @@
         android:id="@+id/fearQuizFragment"
         android:name="com.example.malataana.FearQuizFragment"
         android:label="fragment_fear_quiz"
-        tools:layout="@layout/fragment_fear_quiz" >
+        tools:layout="@layout/fragment_fear_quiz">
         <action
             android:id="@+id/action_fearQuizFragment_to_mainMenuFragment"
             app:destination="@id/mainMenuFragment" />
@@ -99,12 +99,18 @@
         <action
             android:id="@+id/action_fearQuizFragment_to_sadnessQuizFragment2"
             app:destination="@id/sadnessQuizFragment" />
+        <action
+            android:id="@+id/action_fearQuizFragment_to_happinessQuizFragment"
+            app:destination="@id/happinessQuizFragment" />
+        <action
+            android:id="@+id/action_fearQuizFragment_to_First2Fragment"
+            app:destination="@id/First2Fragment" />
     </fragment>
     <fragment
         android:id="@+id/successFragment"
         android:name="com.example.malataana.SuccessFragment"
         android:label="fragment_success"
-        tools:layout="@layout/fragment_success" >
+        tools:layout="@layout/fragment_success">
         <action
             android:id="@+id/action_successFragment_to_fearQuizFragment"
             app:destination="@id/fearQuizFragment" />
@@ -113,9 +119,62 @@
         android:id="@+id/sadnessQuizFragment"
         android:name="com.example.malataana.SadnessQuizFragment"
         android:label="fragment_sadness"
-        tools:layout="@layout/fragment_sadness" >
+        tools:layout="@layout/fragment_sadness">
         <action
             android:id="@+id/action_sadnessQuizFragment_to_mainMenuFragment"
             app:destination="@id/mainMenuFragment" />
+        <action
+            android:id="@+id/action_sadnessQuizFragment_to_happinessQuizFragment"
+            app:destination="@id/happinessQuizFragment" />
+        <action
+            android:id="@+id/action_sadnessQuizFragment_to_fearQuizFragment"
+            app:destination="@id/fearQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/First2Fragment"
+        android:name="com.example.malataana.First2Fragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_first2">
+
+        <action
+            android:id="@+id/action_First2Fragment_to_Second2Fragment"
+            app:destination="@id/Second2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/Second2Fragment"
+        android:name="com.example.malataana.Second2Fragment"
+        android:label="@string/second_fragment_label"
+        tools:layout="@layout/fragment_second2">
+
+        <action
+            android:id="@+id/action_Second2Fragment_to_First2Fragment"
+            app:destination="@id/First2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/happinessQuizFragment"
+        android:name="com.example.malataana.HappinessQuizFragment"
+        android:label="fragment_happiness_quiz"
+        tools:layout="@layout/fragment_happiness_quiz" >
+        <action
+            android:id="@+id/action_happinessQuizFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+        <action
+            android:id="@+id/action_happinessQuizFragment_to_angerQuizFragment"
+            app:destination="@id/angerQuizFragment" />
+        <action
+            android:id="@+id/action_happinessQuizFragment_to_sadnessQuizFragment"
+            app:destination="@id/sadnessQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/angerQuizFragment"
+        android:name="com.example.malataana.AngerQuizFragment"
+        android:label="fragment_anger_quiz"
+        tools:layout="@layout/fragment_anger_quiz" >
+        <action
+            android:id="@+id/action_angerQuizFragment_to_mainMenuFragment"
+            app:destination="@id/mainMenuFragment" />
+        <action
+            android:id="@+id/action_angerQuizFragment_to_happinessQuizFragment"
+            app:destination="@id/happinessQuizFragment" />
     </fragment>
 </navigation>

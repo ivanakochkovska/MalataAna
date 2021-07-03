@@ -14,8 +14,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-
-public class FearQuizFragment extends Fragment {
+public class AngerQuizFragment extends Fragment {
 
     @Override
     public View onCreateView(
@@ -38,46 +37,46 @@ public class FearQuizFragment extends Fragment {
         fearQuizFirstImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                view.findViewById(R.id.imageView4).setVisibility(View.VISIBLE);
-                final Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        // Do something after 5s = 5000ms
-                        view.findViewById(R.id.imageView4).setVisibility(View.INVISIBLE); //TRUE
-                    }
-                }, 4000);
-            }
-        });
-
-
-        ImageView fearQuizSecondImage = (ImageView) view.findViewById(R.id.quiz_happiness);
-        fearQuizSecondImage.setImageResource(R.drawable.quiz_happiness);//set the source in java class
-        fearQuizSecondImage.setImageResource(R.drawable.quiz_happiness);//set the source in java class
-        fearQuizSecondImage.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
                 view.findViewById(R.id.imageView5).setVisibility(View.VISIBLE);
                 final Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         // Do something after 5s = 5000ms
-                        view.findViewById(R.id.imageView5).setVisibility(View.INVISIBLE);
+                        view.findViewById(R.id.imageView5).setVisibility(View.INVISIBLE); //TRUE
                     }
                 }, 4000);
             }
         });
 
-        ImageView sound = (ImageView) view.findViewById(R.id.quiz_fear_sound);
+
+        ImageView fearQuizSecondImage = (ImageView) view.findViewById(R.id.quiz_anger);
+        fearQuizSecondImage.setImageResource(R.drawable.quiz_anger);//set the source in java class
+        fearQuizSecondImage.setImageResource(R.drawable.quiz_anger);//set the source in java class
+        fearQuizSecondImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                view.findViewById(R.id.imageView4).setVisibility(View.VISIBLE);
+                final Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        // Do something after 5s = 5000ms
+                        view.findViewById(R.id.imageView4).setVisibility(View.INVISIBLE);
+                    }
+                }, 4000);
+            }
+        });
+
+        ImageView sound = (ImageView) view.findViewById(R.id.quiz_anger_sound);
         sound.setImageResource(R.drawable.sound_frame);//set the source in java class
-        ImageView home = (ImageView) view.findViewById(R.id.quiz_happiness_home);
+        ImageView home = (ImageView) view.findViewById(R.id.quiz_anger_home);
         home.setImageResource(R.drawable.home);
         home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                NavHostFragment.findNavController(FearQuizFragment.this)
-                        .navigate(R.id.action_fearQuizFragment_to_mainMenuFragment);
+                NavHostFragment.findNavController(AngerQuizFragment.this)
+                        .navigate(R.id.action_angerQuizFragment_to_mainMenuFragment);
             }
         });
         final MediaPlayer mp = MediaPlayer.create(getContext(), R.raw.ana_se_plashi);
@@ -93,8 +92,8 @@ public class FearQuizFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mp.stop();
-                NavHostFragment.findNavController(FearQuizFragment.this)
-                        .navigate(R.id.action_fearQuizFragment_to_sadnessQuizFragment2);
+                NavHostFragment.findNavController(AngerQuizFragment.this)
+                        .navigate(R.id.action_angerQuizFragment_to_mainMenuFragment);
             }
         });
         ImageView arrowBack = (ImageView) view.findViewById(R.id.back_id);
@@ -103,8 +102,8 @@ public class FearQuizFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 mp.stop();
-                NavHostFragment.findNavController(FearQuizFragment.this)
-                        .navigate(R.id.action_fearQuizFragment_to_mainMenuFragment);
+                NavHostFragment.findNavController(AngerQuizFragment.this)
+                        .navigate(R.id.action_angerQuizFragment_to_happinessQuizFragment);
             }
         });
     }
